@@ -1,0 +1,132 @@
+.Tmar{
+  margin-top: 100px;
+}
+.trandingh1{
+  margin-bottom: 20px;
+}
+.Happaning_margin{
+  margin-top: 50px;
+}
+.happaning1{
+  margin: 5px;
+}
+@media(min-width:992px){
+  .navbar-expand-lg .navbar-collapse{
+    width: 100%;
+  }
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url('/static/tourshare/images/home.png');
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+.opacity{
+  opacity: 0.9;
+}
+
+
+.footer-top {
+    padding: 60px 0;
+    background: #2E4262;
+    text-align: left;
+    color: #aaa;
+    margin-top: 100px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 8px;
+    color: #777;
+    border: 0;
+}
+.footer-about p a {
+    color: #aaa;
+    border-bottom: 1px dashed #666;
+}
+.footer-contact p {
+    word-wrap: break-word;
+}
+.footer-contact p a {
+    color: #aaa;
+    border-bottom: 1px dashed #666;
+}
+
+.footer-contact i {
+    padding-right: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+.footer-top h3 {
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+    border: 0;
+}
+.footer-social i {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+
+
+
+
+.PostBtn {
+    height: 70px;
+    margin: -3px;
+    padding: 25px;
+}
+#NeedBtn
+{
+ background-position: -4px 0;
+}
+#ProvBtn
+{
+ background-position: -59px 0px;
+}
+
+#fourthBtn {
+    background-color: rgb(2, 2, 65);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2px;
+}
+
+#home{
+
+display: flex;
+flex-direction: column;
+
+height: 170px;
+justify-content: center;
+align-items: center;
+
+}
+h1.h-home {
+    color: #FF914F;
+    text-shadow: 3px 4px 5px #000000;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+.Search-mr{
+  margin-top: 80px;
+}

@@ -1,0 +1,276 @@
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Team</title>
+    <link rel="stylesheet" href="{% static 'tourshare/css/create.css' %}">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  
+</head>
+
+
+
+<body>
+
+
+
+
+    <!-- navbar section star from here -->
+
+    <header class="header">
+
+        <!-- mid box for navbar -->
+
+        <div class="mid">
+            <img src="{% static 'tourshare/images/logo1.png'%}" alt="tourshare.com">
+        </div>
+
+        <!-- left box for logo -->
+
+        <div class="left">
+            <ul class="navbar">
+                <li><a href="/tourshare" class="active">Home</a></li>
+
+                <li><a href="/tourshare/createteam" class="active">Create Team</a></li>
+                <li><a href="/tourshare/jointeam">Join Team</a></li>
+                <li><a href="/tourshare/aboutus" class="active">About Us</a></li>
+
+
+            </ul>
+        </div>
+
+        <!-- Right box for navbar -->
+
+        <div class="right">
+            <ul class="navbar-1">
+                <li><a href="/tourshare/signin" class="active">Sign In</a></li>
+                <li><a href="/tourshare/signup">Sign Up</a></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <!-- home  section star from here -->
+
+    <section id="home">
+
+
+        <h1 class="h-home">CREATE TEAM</h1>
+
+
+
+    </section>
+
+
+    <!-- Sign in section  star from here -->
+    <section id="create_in">
+
+
+
+        <div id="form_fist" class="form_1_first"> 
+            <form action="/tourshare/createteam/" method="post" enctype="multipart/form-data"  >  {% csrf_token %}
+
+
+                <div class="container_1">
+
+                    <div id="label1">
+
+                        <label class="labeling" for="">Destination </label>
+                        &emsp;&emsp;&emsp;&emsp;&emsp;
+                        <input type="text" placeholder="where you want to go" name="destination" id="destination" required>
+                    </div>
+
+                    <div id="label2">
+
+                        <label class="labeling" for="">Enter Email </label>
+
+                        &emsp;&emsp;&emsp;&emsp;&emsp;
+                        <input type="email" placeholder="Enter email" name="email" id="email"  required>
+                    </div>
+
+                    <div id="label3">
+
+                        <label class="labeling" for="">Phone Number </label>
+                        &ensp;&emsp; &emsp;&nbsp;
+
+                        <input type="tel" placeholder="123456789" name="phone_number" id="phone_number"  required>
+                    </div>
+
+                    <div id="label4">
+
+                        <label class="labeling" for="">Team Member </label>
+                        &ensp;&emsp; &ensp; &ensp;&nbsp;
+
+                        <input type="number" placeholder="" name="team_member" id="team_member" required>
+                    </div>
+
+
+                    <div id="label5">
+
+                        <label class="labeling" for="">Needed Member </label>
+                        &ensp;&emsp; &ensp;
+
+                        <input type="number" placeholder="" name="needed_member" id="needed_member" required>
+                    </div>
+
+                    <div id="label5">
+
+                        <label class="labeling" for="">Start And End Date</label>
+                        &ensp;&ensp;&nbsp; 
+                        <input type="date" placeholder="enter" name="start_date"   id="start_date" required>
+                        <span class="to">To </span>
+                        <input type="date" placeholder="" name="end_date"    id="end_date" required>
+                    </div>
+
+                    <div id="label6">
+
+                        <label class="labeling" for="">Address </label>
+                        &emsp; &emsp; &emsp; &emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" placeholder="address" name="address"   id="adress"  required>
+                    </div>
+                     <div id="label7">
+
+                        <span>Facebook Link</span>
+                        &emsp; &emsp; &emsp;
+                        <input type="text" placeholder="Facebook profile link" name="fblink"  id="fblink"  required>
+                    </div>
+
+                    <div id="label8">
+
+                        <span>Twitter Link</span>
+                        &emsp; &emsp; &emsp;&emsp;
+                        <input type="text" placeholder="Twitter profile link" name="twitterlink"  id="twitterlink"  required>
+                    </div>
+
+
+                    <div id="label9">
+
+                        <label class="labeling" for="">Upload National id </label>
+                        &emsp; 
+                        <input type="file" placeholder="Upload" name="national_id_image" id="national_id_image"  accept="image/*"   onchange="loadFile(event)"  required>
+                        &emsp;
+                        <img id="output" width="200" />
+                    </div>
+
+
+                    <div id="label10">
+
+                        <label class="labeling" for="">Upload Your Image </label>
+                        &emsp;
+                        <input type="file" placeholder="Upload" name="create_user_image" id="create_user_image" accept="image/*" onchange="loadFile1(event)"
+                            required>
+                        &emsp;
+                        <img id="output1" width="200" />
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+                <span><button class="create_up" type="submit">CREATE</button></span>
+            </form>
+
+
+            
+
+
+        </div>
+
+    </section>
+
+
+    </form>
+
+    <!-- footer section sytart from here -->
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut
+                            vehicula
+                            rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar
+                            dictum
+                            vel in justo.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                                class="icon ion-social-twitter"></i></a><a href="#"><i
+                                class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Company Name © 2018</p>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+           
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        var loadFile1= function(event) {
+            var image = document.getElementById('output1');
+           
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+
+
+        </script>
+
+
+
+
+
+</body>
+
+</html>
