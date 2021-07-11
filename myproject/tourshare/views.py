@@ -84,7 +84,12 @@ def checkout(request):
       
          mydata= join_user(group_name=group_name,team_member=team_member,email=email,phone_number=phone_number,address=address,fblink=fblink,twitterlink=twitterlink,national_id_image=national_id_image,join_user_image=join_user_image)
          mydata.save()
+         if request.method=="POST":
+             return render(request,'tourshare/connect.html')
+
     return render(request,'tourshare/checkout.html')
+
+    
     
 
 def signin(request):
@@ -170,15 +175,15 @@ def connect(request):
         return render(request,'tourshare/connect.html')
 
 def room(request, room):
-   
+       
     return render(request, 'tourshare/room.html', )
 def checkview(request):
     room = request.POST['room_name']
     username = request.POST['username']
 
     if Room.objects.filter(name=room).exists():
-        return render(request,'tourshare/checkview/' +room+ '/?username='+username)
+        return render(request,'/' +room+ '/?username='+username)
     else:
         new_room = Room.objects.create(name=room)
         new_room.save()
-        return render(request,'tourshare/checkview/'+room+'/?username='+username)
+        return render(request,'/'+room+'/?username='+username)

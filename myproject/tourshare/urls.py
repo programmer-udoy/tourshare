@@ -18,6 +18,6 @@ urlpatterns = [
     path("signup/",views.signup, name="Signup"),
     path("contactus/",views.contactus, name="ContactUs"),
     path("connect/",views.connect, name=" Connect"),
-    path('<str:room>/', views.room, name='room'),
-    path('checkview', views.checkview, name='checkview'),
+    path("<str:room>/", views.room, name="room"),
+    path("checkview", views.checkview, name="checkview"),
 ]
